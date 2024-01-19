@@ -108,10 +108,8 @@ body {
     height: 70px;
     display: flex;
     align-items: center;
-    transition: .5s;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: calc(.2s * var(--i));
+
+
 }
 
 .gallery img {
@@ -122,6 +120,10 @@ body {
     border: 2px solid #ffe1bf;
     align-items: center;
     text-decoration: none;
+    transition: .2s;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
 .gallery img:hover {
@@ -173,25 +175,107 @@ body {
     width: 50%;
     border-radius: 3px;
 }
-.about-text h2{
+
+.about-text h2 {
     font-size: 60px;
 }
-.about-text h2 span{
+
+.about-text h2 span {
     color: #fb8500;
 }
-.about-text h4{
+
+.about-text h4 {
     font-size: 27px;
     font-weight: 600;
     color: #fff;
     line-height: 1.7;
     margin: 15px 0 30px;
 }
+
 .about-text p {
     color: aliceblue;
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 4rem;
 }
+#services{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.sub-title{
+    text-align: center;
+    font-size: 60px;
+    padding: 70px;
+}
+.sub-title span{
+    color: #fb8500;
+}
+.container {
+    padding: 90px;
+
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #fb8500,
+              1px 1px 20px #ff9a26;
+}
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+.services-list div a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.read {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #fb8500;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #fb8500,
+    0 0 25px #fb8500;
+}
+.read:hover {
+    box-shadow: 0 0 50px #fb8500,
+    0 0 25px #fb8500, 0 0 50px #fb8500,
+    0 0 50px #fb8500, 0 0 50px #fb8500;
+
+}
+.services-list div:hover{
+    transform: translateY(-10px);
+}
+
 
 
 
