@@ -16,7 +16,7 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: transparent;
+    background: #00012b;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +25,7 @@ body {
 
 .logo {
     position: relative;
-    font-size: 50px;
+    font-size: 25px;
     color: #fb8500;
     text-decoration: none;
     font-weight: 600;
@@ -198,31 +198,37 @@ body {
     line-height: 1.4;
     margin-bottom: 4rem;
 }
-#services{
+
+#services {
     color: aliceblue;
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 4rem;
 }
-.sub-title{
+
+.sub-title {
     text-align: center;
     font-size: 60px;
     padding: 70px;
 }
-.sub-title span{
+
+.sub-title span {
     color: #fb8500;
 }
+
 .container {
     padding: 90px;
 
 }
-.services-list{
+
+.services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
-.services-list div{
+
+.services-list div {
     background-color: transparent;
     padding: 40px;
     font-size: 13px;
@@ -231,18 +237,21 @@ body {
     border-radius: 20px;
     transition: background 0.5s, transform 0.5s;
     box-shadow: 1px 1px 20px #fb8500,
-              1px 1px 20px #ff9a26;
+        1px 1px 20px #ff9a26;
 }
+
 .services-list div i {
     font-size: 50px;
     margin-bottom: 30px;
 }
+
 .services-list div h2 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
 
 }
+
 .services-list div a {
     text-decoration: none;
     color: #000000;
@@ -250,6 +259,7 @@ body {
     margin-top: 20px;
     display: inline-block;
 }
+
 .read {
     display: inline-block;
     padding: 12px 28px;
@@ -264,18 +274,252 @@ body {
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
     box-shadow: 0 0 5px #fb8500,
-    0 0 25px #fb8500;
+        0 0 25px #fb8500;
 }
+
 .read:hover {
     box-shadow: 0 0 50px #fb8500,
-    0 0 25px #fb8500, 0 0 50px #fb8500,
-    0 0 50px #fb8500, 0 0 50px #fb8500;
+        0 0 25px #fb8500, 0 0 50px #fb8500,
+        0 0 50px #fb8500, 0 0 50px #fb8500;
 
 }
-.services-list div:hover{
+
+.services-list div:hover {
     transform: translateY(-10px);
 }
 
+section {
+    display: flex;
+    flex-direction: wrap;
+}
+
+.container1 {
+    width: 600px;
+    height: 500;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+
+}
+
+.bar {
+    font-size: 23px;
+}
+
+.Technical-bars .bar {
+    margin-top: 40px 0;
+}
+
+.Technical-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.Technical-bars .bar:last-child {
+    margin-bottom: 0;
+}
+
+.Technical-bars .bar .info {
+    margin-bottom: 5px;
+
+}
+
+.Technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.Technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.Technical-bars .bar .progress-line span{
+    height: 100%;
+    background-color: #fb8500;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progress-line.html span {
+    width: 90%;
+}
+
+.progress-line.css span {
+    width: 75%;
+}
+
+.progress-line.javaScript span {
+    width: 30%;
+}
+
+.progress-line.python span {
+    width: 40%;
+}
+
+.progress-line.react span {
+    width: 17%;
+}
+.progress-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+.progress-line.html span::after{
+    content: "90%";
+}
+.progress-line.css span::after{
+    content: "75%";
+}
+.progress-line.javaScript span::after{
+    content: "30%";
+}
+.progress-line.python span::after{
+    content: "45%";
+}
+.progress-line.react span::after{
+    content: "17%";
+}
+.progress-line span::before{
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0;
+    border-top-color: #000000;
+    top: -10px;
+    right: -0px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+.radial-bars{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.radial-bars .radial-bar{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.radial-bars .radial-bar svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+.radial-bars .radial-bar .progress-bars{
+    stroke-width: 10;
+    stroke: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+
+}
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+.path {
+    stroke-width: 10;
+    stroke: #fb8500;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+.path-1{animation: animate-path1 1s 1s linear forwards;}
+.path-2{animation: animate-path2 1s 1s linear forwards;}
+.path-3{animation: animate-path3 1s 1s linear forwards;}
+.path-4{animation: animate-path4 1s 1s linear forwards;}
+
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 75;;
+    }
+}
+@keyframes animate-path2{
+    100%{
+        stroke-dashoffset: 45;;
+    }
+}
+@keyframes animate-path3{
+    100%{
+        stroke-dashoffset: 325;;
+    }
+}
+@keyframes animate-path4{
+    100%{
+        stroke-dashoffset: 125;;
+    }
+}
+.radial-bar .percentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.radial-bar .text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50px);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
 
 
 
