@@ -61,7 +61,7 @@ body {
 .sub-title {
     text-align: center;
     font-size: 60px;
-    padding: 70px;
+    padding: 5px;
 }
 
 .sub-title span {
@@ -69,7 +69,7 @@ body {
 }
 
 .container {
-    padding: 90px;
+    padding: 95px;
 
 }
 .services-list {
@@ -133,7 +133,9 @@ body {
         0 0 50px #fb8500, 0 0 50px #fb8500;
 
 }
-
+.services-list div:hover {
+    transform: translateY(-10px);
+}
 
 
 

@@ -170,6 +170,27 @@ body {
 
 }
 
+.poster-container {
+    width: 300px;
+    height: 450px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.poster,
+.cutout {
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 23px;
+    transition: transform 0.3s ease; 
+}
+
+
+
+
+
 .about-img img {
     padding-bottom: 20%;
     max-width: 630px;
